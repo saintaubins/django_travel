@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+db_user = os.environ.get('DB_USER')
+db_password = os.environ.get('DB_PASS')
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,10 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@z@w2zh5wl4ejlz4j9u*1h7wn_03bwld1psuo(1$eakv_g9#3q'
+SECRET_KEY = os.environ.get('DB_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -78,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'saint',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
+        'USER': db_user,
+        'PASSWORD': db_password,
         'HOST': 'localhost',
 
     }
