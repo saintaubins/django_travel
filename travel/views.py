@@ -4,11 +4,11 @@ from .models import Destination
 # Create your views here.
 
 
-def index(request):
-
-    
+def index(request):    
     dests = Destination.objects.all()
-
     return render(request, 'index.html', {'dests': dests})
+
+def contact(request):    
+    return render(request, 'contact.html')
 
 

@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DB_KEY')
+SECRET_KEY = 'DB_a&lm*5_6py$1bb+(xfd@uyv15*8$!f2#jk=r+gh3_wz9%3romgKEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,14 +83,15 @@ WSGI_APPLICATION = 'sem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'saint',
-        'USER': db_user,
-        'PASSWORD': db_password,
-        'HOST': 'localhost',
+        'USER': 'uuwjqwjpnhzbkt',
+        'PASSWORD': '899e0251aff782308e48b8c27f2237e5f942c5a0c0e5f2d997d2438178bc50e0',
+        'HOST': 'ec2-3-217-87-84.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'NAME': 'dbmt8hnp7a5e7',
 
     }
 }
-
+#postgres://uuwjqwjpnhzbkt:899e0251aff782308e48b8c27f2237e5f942c5a0c0e5f2d997d2438178bc50e0@ec2-3-217-87-84.compute-1.amazonaws.com:5432/dbmt8hnp7a5e7
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
